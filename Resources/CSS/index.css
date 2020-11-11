@@ -1,0 +1,74 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: whitesmoke;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 16% 47% 35%;
+    grid-template-areas:
+    " header header header header "
+    " left-sidebar main main right-sidebar "
+    " footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background: rgb(28, 214, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-sidebar {
+    grid-area: left-sidebar;
+    background: rgb(235, 63, 11);
+    display: flex;
+    justify-content: center;
+}
+.left-sidebar h3 {
+    line-height: 500%;
+}
+
+main {
+    grid-area: main;
+    background: rgb(25, 177, 25);
+    display: flex;
+    justify-content: center;
+}
+main h3 {
+    line-height: 500%;
+}
+
+.right-sidebar {
+    grid-area: right-sidebar;
+    background: rgb(235, 235, 41);
+    display: flex;
+    justify-content: center;
+}
+.right-sidebar h3 {
+    line-height: 500%;
+}
+
+/* footer tag (grid item & flex container) */
+footer {
+    grid-area: footer;
+    background: rgb(175, 18, 175);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* footer class (flex items) */
+.footer {
+    background: rgb(223, 148, 82);
+    width: 22%;
+    height: 60%;
+    margin: 0% .75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
